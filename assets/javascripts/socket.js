@@ -93,10 +93,10 @@ class Socket {
 
         document.getElementById('save_image').addEventListener('click', evt=> {
             html2canvas(document.querySelector("#characters")).then(canvas => {
-                const dataUrl = canvas.toDataURL();
+                const dataUrl = canvas.toDataURL("image/jpeg");
                 const link = document.createElement('a');
                 link.href = dataUrl;
-                link.download = document.getElementById('manhwa').value + '.png';
+                link.download = document.getElementById('manhwa').value + '.jpg';
                 link.click();
             });
         });

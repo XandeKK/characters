@@ -10,12 +10,12 @@ server.on('connection', (socket) => {
 		const msg = JSON.parse(message);
 		if (msg.type === 'manhwa') {
 			const data = {
-				manhwas: get_json('/home/xandekk/Obras/manhwas.json'),
+				manhwas: get_json('/home/xande/Works/manhwas.json'),
 				type: 'manhwa'
 			}
 			socket.send(JSON.stringify(data));
 		} else if (msg.type === 'get_characters') {
-			const json = get_json(`/home/xandekk/Obras/json/${msg.manhwa}.json`);
+			const json = get_json(`/home/xande/Works/json/${msg.manhwa}.json`);
 			const data = {
 				characters: json.characters || [],
 				background_image: json.background_image,
@@ -27,7 +27,7 @@ server.on('connection', (socket) => {
 				characters: JSON.parse(msg.characters),
 				background_image: msg.background_image
 			}
-			fs.writeFileSync(`/home/xandekk/Obras/json/${msg.manhwa}.json`, JSON.stringify(data));
+			fs.writeFileSync(`/home/xande/Works/json/${msg.manhwa}.json`, JSON.stringify(data));
 			socket.send(JSON.stringify({
 				type: 'message',
 				message: 'file saved'
