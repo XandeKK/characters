@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'WildWords': ['"WildWords"']
+        'Tournedos-Regular': ['"Tournedos-Regular"']
       }
     },
   },

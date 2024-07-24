@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+	/*@font-face {
+	  font-family: 'Tournedos-Regular';
+	  src: url('/fonts/Tournedos-Regular.ttf')
+	}*/
 	@font-face {
-	  font-family: 'WildWords';
-	  src: url('/fonts/WildWords.ttf')
+	  font-family: CCMarianChurchland-Regular;
+	  src: url(/fonts/CCMarianChurchland-Regular.ttf);
 	}
 	#characters {
-	    font-family: WildWords;
+	    font-family: 'CCMarianChurchland-Regular';
 	}
 }

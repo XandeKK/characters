@@ -151,13 +151,13 @@ function create_character(character, parent) {
 
     const name_p = document.createElement('p');
     name_p.id = 'name-' + id;
-    name_p.className = 'text-lg';
+    name_p.className = 'text-xl';
     name_p.textContent = character.name;
     secondary_div.appendChild(name_p);
 
     const description_p = document.createElement('p');
     description_p.id = 'description-' + id;
-    description_p.className = 'text-gray-600 text-xs';
+    description_p.className = 'text-gray-600';
     description_p.textContent = character.description;
     secondary_div.appendChild(description_p);
 
